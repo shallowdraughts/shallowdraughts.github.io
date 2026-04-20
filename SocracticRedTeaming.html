@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <style>
+        :root {
+            --primary: #2b6cb0;
+            --secondary: #e53e3e; 
+            --accent: #3182ce;
+            --prompt-gold: #d69e2e;
+            --bg: #f8fafc;
+            --text: #2d3748;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 850px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+        header {
+            border-bottom: 4px solid var(--secondary);
+            margin-bottom: 30px;
+        }
+        h1 { color: var(--secondary); margin: 0; text-transform: uppercase; font-size: 24px; }
+        .mission-badge {
+            display: inline-block;
+            background: #2d3748;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+        
+        h2 { color: var(--primary); font-size: 18px; margin-top: 30px; border-left: 4px solid var(--primary); padding-left: 10px; }
+        
+        details { margin-bottom: 12px; border: 1px solid #e2e8f0; border-radius: 8px; }
+        summary { padding: 15px; background: #edf2f7; font-weight: 600; cursor: pointer; display: flex; align-items: center; }
+        details[open] summary { background: var(--primary); color: white; }
+        .content { padding: 20px; }
+        
+        .prompt-example {
+            background: #fffaf0;
+            border: 1px dashed var(--prompt-gold);
+            padding: 15px;
+            margin: 10px 0;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+        }
+        .action-step { font-weight: bold; color: var(--secondary); font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="mission-badge">STUDENT FIELD GUIDE</div>
+            <h1>Socratic Red Teaming</h1>
+        </header>
+
+        <p>Use this guide to dismantle AI-generated content and rebuild it with human expertise. <strong>Click each challenge to reveal your tactical response.</strong></p>
+
+        <h2>Phase 1 & 2: The Audit Challenges</h2>
+        <details>
+            <summary>The AI sounds too perfect or vague.</summary>
+            <div class="content">
+                <span class="action-step">Tactical Move: De-Styling</span>
+                <p>Strip the grammar. Convert the AI response into simple bullet points of pure data. If the data disappears, the response was "hallucinated fluff."</p>
+            </div>
+        </details>
+
+        <details>
+            <summary>The AI is providing fake citations (Mirages).</summary>
+            <div class="content">
+                <span class="action-step">Tactical Move: The Link-Check</span>
+                <p>Verify every source. If you can't find a live DOI, a library entry, or a physical book, mark the claim as <strong>FAILED</strong>.</p>
+            </div>
+        </details>
+
+        <h2>Phase 3: Tactical Prompting (Rig the System)</h2>
+        <p>Don't just ask questions—structure your prompts to make the AI easier to audit.</p>
+
+        <details>
+            <summary>How do I get the AI to "Show its Work"?</summary>
+            <div class="content">
+                <span class="action-step">Tactic: Chain-of-Thought (CoT)</span>
+                <p>Force the AI to explain its logic step-by-step before it gives the answer. It is much easier to find an error in a 10-step list than in a paragraph.</p>
+                <div class="prompt-example">
+                    "Explain your reasoning for this claim step-by-step. For every step, identify one potential counter-argument."
+                </div>
+            </div>
+        </details>
+
+        <details>
+            <summary>How do I stop the AI from being a "Yes-Man"?</summary>
+            <div class="content">
+                <span class="action-step">Tactic: Persona Priming</span>
+                <p>Give the AI a role that requires critical thinking. Tell it to be a skeptical peer-reviewer or a devil's advocate.</p>
+                <div class="prompt-example">
+                    "Act as a critical editor. Your goal is to find three logical fallacies or omissions in your previous answer."
+                </div>
+            </div>
+        </details>
+
+        <details>
+            <summary>How do I prevent the AI from guessing?</summary>
+            <div class="content">
+                <span class="action-step">Tactic: Negative Constraints</span>
+                <p>Give the AI strict rules on what it <strong>cannot</strong> do. This sets a trap: if the AI breaks the rule, you've found a vulnerability.</p>
+                <div class="prompt-example">
+                    "Do not use generic adjectives. If you do not have a specific date, name, or statistic for a claim, state 'Data Missing' instead of generalizing."
+                </div>
+            </div>
+        </details>
+
+        <footer>
+            <strong>Final Mastery:</strong> A "Hardened Draft" includes the original AI error, your Socratic Interrogation, and your tactical prompt improvement.
+        </footer>
+    </div>
+</body>
+</html>
