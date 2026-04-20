@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IB ESS Lab Report Strategy Toolkit (2026)</title>
+    <style>
+        :root {
+            --primary: #1b5e20; 
+            --secondary: #2e7d32;
+            --accent: #f39c12;
+            --social: #2980b9;
+            --bg: #f1f8e9;
+            --text: #2c3e50;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            max-width: 950px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        header h1 { margin: 0; font-size: 2.2rem; }
+        header p { opacity: 0.9; margin-top: 10px; font-weight: 300; }
+
+        .strategy-card {
+            background: white;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border: 1px solid #c8e6c9;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        summary {
+            padding: 20px;
+            font-weight: 700;
+            font-size: 1.25rem;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--primary);
+        }
+
+        summary:hover { background: #f1f8e9; }
+        summary::after { content: '＋'; color: var(--accent); font-size: 1.4rem; }
+        details[open] summary { border-bottom: 1px solid #eee; background: #f9fdf9; }
+        details[open] summary::after { content: '－'; }
+
+        .content { padding: 25px; }
+        
+        h3 { color: var(--secondary); margin-top: 0; border-left: 4px solid var(--accent); padding-left: 15px; }
+
+        .pro-tip {
+            background: #e3f2fd;
+            border-left: 4px solid var(--social);
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+            font-size: 0.95rem;
+        }
+
+        .checklist {
+            background: #fff9c4;
+            border: 1px solid #fbc02d;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 0.9rem; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background: #f5f5f5; color: var(--primary); }
+
+        .badge {
+            background: var(--social);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        footer { text-align: center; padding: 40px; color: #7f8c8d; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <header>
+        <h1>🌱 IB ESS Lab Report Toolkit</h1>
+        <p>Interdisciplinary Strategies for Environmental Systems & Societies (2026 Syllabus)</p>
+    </header>
+
+    <details class="strategy-card">
+        <summary>🌍 Inquiry & Research Question (Crit A)</summary>
+        <div class="content">
+            <span class="badge">Environmental Context</span>
+            <h3>The Local-Global Bridge</h3>
+            <p>Don't just pick a science topic; find an <strong>environmental issue</strong> and bridge it to a local study.</p>
+            
+            
+            <div class="pro-tip">
+                <strong>Strategy:</strong> Start with a Global Issue (e.g., Eutrophication) → Link to a Local Site (e.g., Lake Lugano) → Formulate RQ: "To what extent does the nitrate concentration ($ppm$) affect the dissolved oxygen levels ($mg/L$) in Lake Lugano?"
+            </div>
+            
+            <div class="checklist">
+                <strong>✓ Quality Checklist:</strong>
+                <ul>
+                    <li>Includes a specific environmental issue in the introduction.</li>
+                    <li>RQ includes IV, DV, and units.</li>
+                    <li>Clearly identifies your Environmental Value System (EVS) perspective.</li>
+                </ul>
+            </div>
+        </div>
+    </details>
+
+    <details class="strategy-card">
+        <summary>⚖️ Strategy & Tensions (Crit B - NEW)</summary>
+        <div class="content">
+            <span class="badge">Societal Context</span>
+            <h3>The Stakeholder Conflict Map</h3>
+            <p>Identify an existing management strategy for your issue and explain why it causes <strong>tension</strong>.</p>
+            
+            <table>
+                <tr>
+                    <th>Stakeholder</th>
+                    <th>Perspective (EVS)</th>
+                    <th>Goal/Tension</th>
+                </tr>
+                <tr>
+                    <td>Local Farmers</td>
+                    <td>Anthropocentric</td>
+                    <td>Need fertilizers for high crop yields/economic survival.</td>
+                </tr>
+                <tr>
+                    <td>Conservationists</td>
+                    <td>Ecocentric</td>
+                    <td>Protect water quality and biodiversity from runoff.</td>
+                </tr>
+            </table>
+
+            <div class="pro-tip">
+                <strong>Strategy:</strong> Use terms like "Conflict of Goals" or "Trade-offs." This is where you analyze the *Societies* part of ESS.
+            </div>
+        </div>
+    </details>
+
+    <details class="strategy-card">
+        <summary>🛠️ Methodology & Safety (Crit C)</summary>
+        <div class="content">
+            <h3>The 5x5 Justification</h3>
+            <p>Ensure you have at least 5 increments of your IV and 5 repeats for each.</p>
+            
+            <div class="checklist">
+                <strong>Safety, Ethics & Environment (SEE):</strong>
+                <ul>
+                    <li><strong>Safety:</strong> Protecting the researcher (gloves, goggles).</li>
+                    <li><strong>Ethics:</strong> No harm to sentient animals; minimizing plant waste.</li>
+                    <li><strong>Environment:</strong> How did you handle waste? (e.g., "Acid neutralized before disposal").</li>
+                </ul>
+            </div>
+            
+        </div>
+    </details>
+
+    <details class="strategy-card">
+        <summary>📊 Data Treatment (Crit D)</summary>
+        <div class="content">
+            <h3>The Standard Deviation Strategy</h3>
+            <p>In ESS, variability is normal. Use <strong>Standard Deviation (SD)</strong> to show the reliability of your data.</p>
+            
+            
+            <div class="pro-tip">
+                <strong>Strategy:</strong> If your SD bars on a graph overlap, your results may not be statistically significant, even if the means are different!
+            </div>
+            
+            <table>
+                <tr><th>Trial 1</th><th>Trial 2</th><th>Mean</th><th>SD</th></tr>
+                <tr><td>12.1</td><td>14.3</td><td>13.2</td><td>±1.55</td></tr>
+            </table>
+        </div>
+    </details>
+
+    <details class="strategy-card">
+        <summary>📈 Analysis & Conclusion (Crit E)</summary>
+        <div class="content">
+            <h3>Choosing Your Inferential Statistics</h3>
+            <p>To reach the top marks, you must prove your results aren't just a fluke. Use this decision tree:</p>
+            
+            <table>
+                <tr>
+                    <th>If your goal is to...</th>
+                    <th>And your data looks like...</th>
+                    <th>Use this test:</th>
+                </tr>
+                <tr>
+                    <td><strong>Find a Relationship</strong></td>
+                    <td>Two sets of continuous numbers (e.g., Temp vs. Growth)</td>
+                    <td><strong>Pearson or Spearman Correlation</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Compare Two Sites</strong></td>
+                    <td>Comparing the means of two distinct groups (e.g., Forest A vs Forest B)</td>
+                    <td><strong>Unpaired T-Test</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Compare Frequencies</strong></td>
+                    <td>Comparing "Counted" data vs. what you expected (e.g., Species counts)</td>
+                    <td><strong>Chi-Squared ($\chi^2$) Test</strong></td>
+                </tr>
+            </table>
+            
+            
+
+            <div class="checklist">
+                <strong>The "So What?" Loop:</strong>
+                Link your conclusion back to the <strong>Environmental Value Systems</strong> discussed in Criterion A. Does your data support a Technocentric or Ecocentric solution?
+            </div>
+        </div>
+    </details>
+
+    <details class="strategy-card">
+        <summary>🔍 Evaluation (Crit F)</summary>
+        <div class="content">
+            <h3>Specific-Impact-Solution Loop</h3>
+            <p>Avoid "human error." Analyze how specific limitations affected your data's accuracy.</p>
+            
+            
+            <table>
+                <tr>
+                    <th>Limitation</th>
+                    <th>Impact on Data</th>
+                    <th>Improvement</th>
+                </tr>
+                <tr>
+                    <td>Small Sample Size</td>
+                    <td>High SD; results may not represent the whole ecosystem.</td>
+                    <td>Increase to 50 samples per site to normalize data.</td>
+                </tr>
+            </table>
+
+            <div class="pro-tip">
+                <strong>Final Touch:</strong> Suggest a realistic modification to the *Strategy* you identified in Criterion B based on your results.
+            </div>
+        </div>
+    </details>
+
+    <footer>
+        <p>IB ESS Internal Assessment Strategy Toolkit | © 2026 | Interdisciplinary Excellence</p>
+    </footer>
+</div>
+
+</body>
+</html>

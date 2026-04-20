@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IB HL Physics Lab Report Toolkit</title>
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            line-height: 1.6;
+            color: #2d3436;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f2f5;
+        }
+        header {
+            background: linear-gradient(135deg, #0984e3, #6c5ce7);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        details {
+            background: white;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            overflow: hidden;
+            border: 1px solid #dfe6e9;
+        }
+        summary {
+            padding: 20px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.2s;
+        }
+        summary:hover { background-color: #f8f9fa; }
+        summary::after { content: "＋"; color: #0984e3; }
+        details[open] summary::after { content: "－"; }
+        
+        .inner { padding: 0 25px 25px; border-top: 1px solid #eee; }
+        h3 { color: #0984e3; margin-top: 20px; }
+        .math-block {
+            background: #f1f2f6;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: "Courier New", monospace;
+            margin: 10px 0;
+            border-left: 4px solid #6c5ce7;
+        }
+        .pro-tip {
+            background: #e3f2fd;
+            border-left: 5px solid #2196f3;
+            padding: 10px 15px;
+            margin: 15px 0;
+            font-size: 0.95rem;
+        }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background: #f8f9fa; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>⚛️ IB HL Physics Lab Toolkit</h1>
+    <p>Strategic Scaffolding for High-Level Experimental Reports</p>
+</header>
+
+<details>
+    <summary>🎯 Crafting the Research Question (RQ)</summary>
+    <div class="inner">
+        <h3>The Variable-Link Strategy</h3>
+        <p>A high-scoring RQ must be specific and focused. Use this template:</p>
+        <div class="math-block">
+            "To what extent does [Independent Variable] affect [Dependent Variable] when [Key Control Variable] is held constant?"
+        </div>
+        <ul>
+            <li><strong>Bad:</strong> "How does light affect resistance?"</li>
+            <li><strong>Good:</strong> "How does the intensity of incident light ($I$) from a halogen source affect the resistance ($R$) of a Light Dependent Resistor (LDR) measured at 20°C?"</li>
+        </ul>
+    </div>
+</details>
+
+<details>
+    <summary>📊 Managing Uncertainties & Errors</summary>
+    <div class="inner">
+        <h3>The Propagation Protocol</h3>
+        <p>IB Physics doesn't just want data; it wants to know how much you <em>trust</em> it.</p>
+        
+        <h4>1. Absolute vs. Percentage</h4>
+        <p>Always state the precision of your instruments (e.g., $\pm 0.01\text{ mm}$ for a micrometer).</p>
+        
+        <h4>2. Propagation Rules:</h4>
+        <ul>
+            <li><strong>Addition/Subtraction:</strong> Add absolute uncertainties.</li>
+            <li><strong>Multiplication/Division:</strong> Add percentage uncertainties.</li>
+            <li><strong>Powers ($x^n$):</strong> Multiply the percentage uncertainty by $n$.</li>
+        </ul>
+        
+        <div class="pro-tip">
+            <strong>Pro Tip:</strong> If your final calculated value has a smaller uncertainty than your instrument's raw precision, something is wrong!
+        </div>
+    </div>
+</details>
+
+<details>
+    <summary>📈 Data Analysis & Graphing</summary>
+    <div class="inner">
+        <h3>Linearization Strategy</h3>
+        <p>If your raw data is a curve (e.g., $T = 2\pi\sqrt{L/g}$), you must <strong>linearize</strong> it to find a gradient that means something.</p>
+        <table>
+            <tr>
+                <th>Relationship</th>
+                <th>x-axis</th>
+                <th>y-axis</th>
+                <th>Gradient represents...</th>
+            </tr>
+            <tr>
+                <td>$y = ax^2$</td>
+                <td>$x^2$</td>
+                <td>$y$</td>
+                <td>$a$</td>
+            </tr>
+            <tr>
+                <td>$y = a/x$</td>
+                <td>$1/x$</td>
+                <td>$y$</td>
+                <td>$a$</td>
+            </tr>
+        </table>
+        <p><strong>Error Bars:</strong> Ensure your graph includes both vertical and horizontal error bars, and a **Line of Best Fit** vs. **Max/Min Slopes**.</p>
+    </div>
+</details>
+
+<details>
+    <summary>🔍 Evaluation: Random vs. Systematic Error</summary>
+    <div class="inner">
+        <h3>The "Source-Impact-Improvement" Loop</h3>
+        <p>Don't just list errors. Analyze them using this 3-step loop:</p>
+        <ol>
+            <li><strong>Identify:</strong> "There was a parallax error when reading the voltmeter."</li>
+            <li><strong>Impact:</strong> "This is a <em>random error</em> which increased the scatter of my data points, making the $R^2$ value lower."</li>
+            <li><strong>Improvement:</strong> "Use a digital multimeter or a high-speed camera to record readings at eye-level."</li>
+        </ol>
+        <div class="pro-tip">
+            <strong>Systematic Error Check:</strong> If your graph has a non-zero y-intercept when the theory says it should pass through (0,0), you have a systematic error!
+        </div>
+    </div>
+</details>
+
+<footer style="text-align:center; margin-top:50px; color: #636e72; font-size: 0.9rem;">
+    <p>HL Physics Lab Strategy Toolkit • Designed for IB Excellence</p>
+</footer>
+
+</body>
+</html>

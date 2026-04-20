@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IB Chemistry Lab Strategy Toolkit</title>
+    <style>
+        :root {
+            --primary: #6c5ce7; /* Chemistry Purple/Indigo */
+            --secondary: #a29bfe;
+            --accent: #00cec9;
+            --warning: #ff7675;
+            --bg: #f9f9ff;
+            --text: #2d3436;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .strategy-card {
+            background: white;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border-left: 6px solid var(--primary);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        summary {
+            padding: 20px;
+            font-weight: 700;
+            font-size: 1.25rem;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .content { padding: 25px; border-top: 1px solid #eee; }
+        
+        h3 { color: var(--primary); margin-top: 0; }
+
+        .chem-box {
+            background: #f1f2f6;
+            border-radius: 6px;
+            padding: 15px;
+            font-family: 'serif';
+            font-style: italic;
+            margin: 15px 0;
+            border-left: 4px solid var(--accent);
+        }
+
+        .safety-alert {
+            background: #fff5f5;
+            border: 1px solid #fab1a0;
+            padding: 15px;
+            border-radius: 8px;
+            color: #d63031;
+            font-size: 0.9rem;
+        }
+
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        th, td { border: 1px solid #dfe6e9; padding: 12px; text-align: left; }
+        th { background: #f8f9fa; }
+
+        footer { text-align: center; padding: 40px; color: #636e72; }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <header>
+        <h1>🧪 IB Chemistry Lab Toolkit</h1>
+        <p>Precision, Stoichiometry, and Safety Strategies</p>
+    </header>
+
+    <details class="strategy-card">
+        <summary>⚗️ The Chemistry Research Question</summary>
+        <div class="content">
+            <h3>Focusing Your Variables</h3>
+            <p>In Chemistry, "Temperature" or "Concentration" are your best friends. Ensure your units are molar ($M$ or $mol\ dm^{-3}$).</p>
+            <div class="chem-box">
+                "How does the concentration of Sodium Thiosulfate ($0.05$ to $0.25\ mol\ dm^{-3}$) affect the rate of reaction ($s^{-1}$) when reacted with $1.0\ M\ HCl$ at room temperature?"
+            </div>
+            
+
+[Image of the effect of concentration on reaction rate graph]
+
+        </div>
+    </details>
+
+    <details class="strategy-card">
+        <summary>👁️ The "Hidden" Data: Qualitative Observations</summary>
+        <div class="content">
+            <h3>Don't Just Record Numbers</h3>
+            <p>IB Chemistry examiners look for "hidden" data. You must record what you see, smell, and hear.</p>
+            <table>
+                <tr><th>Observation Type</th><th>Example</th></tr>
+                <tr><td>Color Change</td><td>"The solution turned from clear to a cloudy yellow."</td></tr>
+                <tr><td>Gas Evolution</td><td>"Vigorous effervescence was noted upon adding the magnesium ribbon."</td></tr>
+                <tr><td>Thermal Change</td><td>"The test tube felt noticeably warm to the touch (exothermic)."</td></tr>
+            </table>
+        </div>
+    </details>
+
+    <details class="strategy-card">
+        <summary>⚠️ Safety & Environmental Impact</summary>
+        <div class="content">
+            <h3>The MSDS Protocol</h3>
+            <p>You must list specific hazards for every chemical used. Use the standard hazard symbols.</p>
+            <div class="safety-alert">
+                <strong>Example:</strong> "0.5M Silver Nitrate ($AgNO_3$): Oxidizer and skin corrosive. Disposal: Precipitated as $AgCl$ and collected in a heavy-metal waste container to avoid aquatic toxicity."
+            </div>
+            
+        </div>
+    </details>
+
+    <details class="strategy-card">
+        <summary>🧮 Processing: The Mole Bridge</summary>
+        <div class="content">
+            <h3>Connecting Mass to Moles</h3>
+            <p>Show one clear sample calculation for every step. Use LaTeX-style formatting for clarity.</p>
+            <ul>
+                <li><strong>Step 1:</strong> Calculate moles ($n = m/M$ or $n = c \times V$).</li>
+                <li><strong>Step 2:</strong> Use molar ratios from the balanced equation.</li>
+                <li><strong>Step 3:</strong> Propagate absolute uncertainties from your burette/pipette.</li>
+            </ul>
+            
+        </div>
+    </details>
+
+    <details class="strategy-card">
+        <summary>🔍 Evaluation: Chemistry-Specific Errors</summary>
+        <div class="content">
+            <h3>Beyond Random Error</h3>
+            <p>In Chemistry, two errors dominate: <strong>Heat Loss</strong> and <strong>Impurity</strong>.</p>
+            <table>
+                <tr><th>Source</th><th>Impact on Result</th><th>Improvement</th></tr>
+                <tr><td>Heat loss to surroundings</td><td>Enthalpy ($\Delta H$) calculated will be lower than literature value.</td><td>Use a bomb calorimeter or double-nested polystyrene cups.</td></tr>
+                <tr><td>Incomplete reaction</td><td>Yield will be lower; molar ratios will be skewed.</td><td>Increase reaction time or use a catalyst.</td></tr>
+            </table>
+            
+        </div>
+    </details>
+
+    <footer>
+        <p>© 2026 IB Chemistry Strategy Guide | Mastery of the Molecular</p>
+    </footer>
+</div>
+
+</body>
+</html>
